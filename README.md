@@ -23,3 +23,10 @@ handle_cast(request :: term, state :: term) ::
   {:noreply, new_state, timeout | :hibernate} |
   {:stop, reason :: term, new_state} when new_state: term
 ```
+
+## Game of live rules
+
+* If an alive cell have less than 2 alive neighbours, it dead on next round
+* If an alive cell have more than 3 alive neighbours, it dead on next round
+* If an alive cell have 2 or 3 alive neighbours, it still alive on next step
+* If a dead cell have 3 alive neighbours, it become alive on next step
