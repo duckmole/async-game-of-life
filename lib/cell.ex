@@ -3,7 +3,7 @@ defmodule Cell do
 
   ## server
 
-  def init({neighbours, cell_state}) do
+  def init_with_neighbours({neighbours, cell_state}) do
     {:ok, {neighbours, {0, cell_state, []}}}
   end
 
